@@ -22,9 +22,7 @@ class Triangle
   def valid_triangle?
       real_triangle = [(@a + @b > @c), (@b + @c > @a), (@a + @c > @b)]
       [a, b, c].each {|x| real_triangle << false if x <= 0}
-
-          raise TriangleError if real_triangle.include?(false)
-        end
+        raise TriangleError if real_triangle.include?(false)
       end
   end
 
