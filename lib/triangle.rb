@@ -17,12 +17,6 @@ class Triangle
         :isosceles
     elsif @a != @b && @b != @c && @a != @c
         :scalene
-      # else #Triangle.kind != :scalene || :isosceles || :equilateral
-      #   begin
-      #     raise TriangleError
-      #   rescue TriangleError => error
-      #       puts error.message
-      #     end
     end
 
     def valid_triangle?
