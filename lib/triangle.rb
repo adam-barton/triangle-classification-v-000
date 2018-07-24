@@ -18,6 +18,7 @@ class Triangle
     else
         :scalene
     end
+  end
 
   def valid_triangle?
       real_triangle = [(a + b > c), (b + c > a), (a + c > b)]
