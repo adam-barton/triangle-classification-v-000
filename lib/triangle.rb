@@ -26,14 +26,10 @@ class Triangle
     end
 
     def valid_triangle?
-      real_triangle = [(@a + @b > @c || @b + @c > @a || @a + @c > @b) && (@a > 0 && @b > 0 && @c > 00)]
-      self.
-
+      real_triangle = [(@a + @b > @c), (@b + @c > @a), (@a + @c > @b)]
+      [a, b, c].each {|x| real_triangle << false if x <= 0}
+        raise TriangleError
     end
-
-
-
-
   end
 
     class TriangleError < StandardError
