@@ -19,11 +19,11 @@ class Triangle
         :scalene
     end
 
-    def valid_triangle?
+  def valid_triangle?
       real_triangle = [(@a + @b > @c), (@b + @c > @a), (@a + @c > @b)]
       [a, b, c].each {|x| real_triangle << false if x <= 0}
         raise TriangleError
-    end
+      end
   end
 
     class TriangleError < StandardError
